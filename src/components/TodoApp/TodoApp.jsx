@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TodoAppContainer } from "./TodoApp.styles";
 import TodoForm from "../TodoForm/TodoForm";
 import TodoListItem from "../TodoListItem/TodoListItem";
 import { v4 } from "uuid";
 
 const TodoApp = () => {
-    const [todos, setTodos] = useState([
-        { id: v4(), task: "buy console" },
-        { id: v4(), task: "play fifa" },
-    ]);
+    const [todos, setTodos] = useState(
+        JSON.parse(localStorage.getItem("todos")) || []
+    );
     const [edit, setEdit] = useState(undefined);
+
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
     const addTodos = (todo) => {
         setTodos([{ id: v4(), task: todo }, ...todos]);
     };
