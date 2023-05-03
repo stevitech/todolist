@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const FormContainer = styled.div``;
+export const FormContainer = styled.div`
+    @media only screen and (max-width: 480px) {
+        max-width: 20rem;
+    }
+`;
 export const StyledForm = styled.form`
     border: 0.2px solid #db82e369;
     width: 30rem;
@@ -17,6 +21,10 @@ export const StyledForm = styled.form`
         -webkit-box-shadow: 0px 4px 20px 4px rgba(34, 35, 43, 1);
         -moz-box-shadow: 0px 4px 20px 4px rgba(34, 35, 43, 1);
         box-shadow: 0px 4px 20px 4px rgba(34, 35, 43, 1);
+    }
+    @media only screen and (max-width: 480px) {
+        max-width: 18rem;
+        gap: 1rem;
     }
 `;
 export const StyledInput = styled.input`
@@ -38,6 +46,9 @@ export const StyledInput = styled.input`
     &:focus {
         outline: none;
     }
+    @media only screen and (max-width: 480px) {
+        padding: 5px;
+    }
 `;
 export const StyledButton = styled.button`
     border-color: transparent;
@@ -50,5 +61,11 @@ export const StyledButton = styled.button`
     &:hover {
         background-color: #9d5ea3;
         color: #ffffff;
+    }
+    @media only screen and (max-width: 480px) {
+        border-radius: 10px;
+        height: 25px;
+        width: 70px;
+        padding: 5px;
     }
 `;

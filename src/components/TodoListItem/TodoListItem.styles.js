@@ -19,6 +19,13 @@ export const TLContainer = styled.div`
             display: flex;
             gap: 2rem;
         }
+        @media only screen and (max-width: 480px) {
+            > p {
+                max-width: 10rem;
+                line-height: 1.1rem;
+                font-size: 0.9rem;
+            }
+        }
     }
 `;
 export const StyledListInput = styled.input`

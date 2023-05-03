@@ -9,12 +9,17 @@ export const TodoAppContainer = styled.div`
     min-height: 45rem;
     max-height: 48rem;
     padding: 2.5rem;
+    width: 39rem;
 
     border-radius: 80px;
     -webkit-box-shadow: 0px 4px 20px -2px rgba(66, 68, 90, 1);
     -moz-box-shadow: 0px 4px 20px -2px rgba(66, 68, 90, 1);
     box-shadow: 0px 4px 20px -2px rgba(66, 68, 90, 1);
-    width: 39rem;
+    @media only screen and (max-width: 480px) {
+        height: 42rem;
+        max-height: 42rem;
+        width: 20rem;
+    }
     .header {
         display: flex;
         flex-direction: column;
@@ -49,6 +54,9 @@ export const TodoAppContainer = styled.div`
             width: 10px;
             border: 1px solid #db82e300;
         }
+        @media only screen and (max-width: 480px) {
+            max-height: 25rem;
+        }
     }
 
     .icons {
@@ -63,6 +71,14 @@ export const TodoAppContainer = styled.div`
         .edit-btn {
             &:hover {
                 color: #e9f76f;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            > svg {
+                font-size: 18px;
+            }
+            .edit-btn {
+                font-size: 18px;
             }
         }
     }
